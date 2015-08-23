@@ -1,0 +1,4 @@
+wget http://www.fastandeasyhacking.com/download/armitage150813.tgz
+tar xf armitage150813.tgz -C /usr/share/armitage/ --strip-components 1
+service postgresql start
+msfdb init
