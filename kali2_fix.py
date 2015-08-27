@@ -20,3 +20,22 @@ subprocess.call(['service', 'postgresql', 'start'])
 print 'Initial msfDB schema creation....'
 subprocess.call(['msfdb', 'init'])
 
+print ' '
+print ' '
+print '============================================='
+print 'upgrade and repair complete!'
+print '============================================='
+print ''
+
+start_it = raw_input('Would you like to start Armitage now? (Y/N)')
+start_it = start_it.upper()
+
+if start_it == 'Y' :
+	print 'starting armitage....'
+	subprocess.call('armitage')
+
+else :
+	print 'Exiting script, thanks for using! - @ompster'
+
+
+
