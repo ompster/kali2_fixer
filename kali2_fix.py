@@ -56,7 +56,7 @@ menu_option = raw_input('-> ')
 
 if menu_option == "1" :
 	fix_armitage_func()
-elif menu_option == "2"
+elif menu_option == "2" :
 	install_chrome_func()
 else :
 	print '''
