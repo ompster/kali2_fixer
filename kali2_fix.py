@@ -6,36 +6,50 @@
 ######################################
 
 import subprocess
+import os
 
-print 'We are about to download the the armitage fix for Kali 2, you need internet access!'
-raw_input('Press Enter to continue...')
-subprocess.call(['wget', 'http://www.fastandeasyhacking.com/download/armitage150813.tgz'])
+inmenu = true
 
-print 'Extracting downloaded archine into /usr/share/armitage'
-subprocess.call(['tar', 'xf', 'armitage150813.tgz', '-C', '/usr/share/armitage/', '--strip-components', '1'])
+while inmenu == true :
+	print 'What would you like to do:'
+	print '''
+			1. Fix Armitage
+			2. Install Chrome (Chromium)
+			'''
+	menu_option = raw_input('-> ')
+if menu_option == 1 :
+	fix_armitage_func()
+else
+	print 'bye'
+	exit()
 
-print 'Starting PostgreSQL service...'
-subprocess.call(['service', 'postgresql', 'start'])
 
-print 'Initial msfDB schema creation....'
-subprocess.call(['msfdb', 'init'])
+def fix_armitage_func():
+	####FIX ARMITAGE####
+	print 'We are about to download the the armitage fix for Kali 2, you need internet access!'
+	raw_input('Press Enter to continue...')
+	subprocess.call(['wget', 'http://www.fastandeasyhacking.com/download/armitage150813.tgz'])
 
-print ' '
-print ' '
-print '============================================='
-print 'upgrade and repair complete!'
-print '============================================='
-print ''
+	print 'Extracting downloaded archine into /usr/share/armitage'
+	subprocess.call(['tar', 'xf', 'armitage150813.tgz', '-C', '/usr/share/armitage/', '--strip-components', '1'])
 
-start_it = raw_input('Would you like to start Armitage now? (Y/N)')
-start_it = start_it.upper()
+	print 'Starting PostgreSQL service...'
+	subprocess.call(['service', 'postgresql', 'start'])
 
-if start_it == 'Y' :
-	print 'starting armitage....'
-	subprocess.call('armitage')
+	print 'Initial msfDB schema creation....'
+	subprocess.call(['msfdb', 'init'])
 
-else :
-	print 'Exiting script, thanks for using! - @ompster'
+
+	start_it = raw_input('Would you like to start Armitage now? (Y/N)')
+	start_it = start_it.upper()
+
+	if start_it == 'Y' :
+		print 'starting armitage....'
+		subprocess.call('armitage')
+
+	else :
+		print 'Exiting script, thanks for using! - @ompster'
+	####END FIX ARMITAGE####
 
 
 
