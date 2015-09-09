@@ -8,20 +8,6 @@
 import subprocess
 import os
 
-inmenu = true
-
-while inmenu == true :
-	print 'What would you like to do:'
-	print '''
-			1. Fix Armitage
-			2. Install Chrome (Chromium)
-			'''
-	menu_option = raw_input('-> ')
-if menu_option == 1 :
-	fix_armitage_func()
-else :
-	print 'bye'
-	exit()
 
 
 def fix_armitage_func():
@@ -50,6 +36,20 @@ def fix_armitage_func():
 	else :
 		print 'Exiting script, thanks for using! - @ompster'
 	####END FIX ARMITAGE####
+
+print '''
+		What to do?
+		1. fix armitage
+		2. install chrome
+		'''
+menu_option = raw_input('-> ')
+
+if menu_option = "1" :
+	fix_armitage_func()
+else :
+	print 'bye!'
+	exit()
+
 
 
 
