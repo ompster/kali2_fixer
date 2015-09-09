@@ -37,17 +37,44 @@ def fix_armitage_func():
 		print 'Exiting script, thanks for using! - @ompster'
 	####END FIX ARMITAGE####
 
+def install_chrome_func() :
+	print 'Installing Chromium, will first update sources...'
+	apt-get update
+	apt-get chromium
+
 print '''
-		What to do?
-		1. fix armitage
-		2. install chrome
+██╗  ██╗ █████╗ ██╗     ██╗    ███████╗██╗██╗  ██╗    ██╗██╗
+██║ ██╔╝██╔══██╗██║     ██║    ██╔════╝██║╚██╗██╔╝    ██║██║
+█████╔╝ ███████║██║     ██║    █████╗  ██║ ╚███╔╝     ██║██║
+██╔═██╗ ██╔══██║██║     ██║    ██╔══╝  ██║ ██╔██╗     ██║██║
+██║  ██╗██║  ██║███████╗██║    ██║     ██║██╔╝ ██╗    ██║██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝    ╚═╝╚═╝
+                                                            
+	'''
+print '''
+		What would you like to do?
+		1. Fix armitage
+		2. Install Chrome
+		3. Exit
 		'''
 menu_option = raw_input('-> ')
 
-if menu_option = "1" :
+if menu_option == "1" :
 	fix_armitage_func()
+elif menu_option == "2"
+	install_chrome_func()
 else :
-	print 'bye!'
+	print '''
+		                                         _              
+    ____                                | |             
+   / __ \   ___   _ __ ___   _ __   ___ | |_  ___  _ __ 
+  / / _` | / _ \ | '_ ` _ \ | '_ \ / __|| __|/ _ \| '__|
+ | | (_| || (_) || | | | | || |_) |\__ \| |_|  __/| |   
+  \ \__,_| \___/ |_| |_| |_|| .__/ |___/ \__|\___||_|   
+   \____/                   | |                         
+                            |_|                         
+	'''
+
 	exit()
 
 
