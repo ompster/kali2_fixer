@@ -39,8 +39,9 @@ def fix_armitage_func():
 
 def install_chrome_func() :
 	print 'Installing Chromium, will first update sources...'
-	apt-get update
-	apt-get chromium
+	os.system ('apt-get update')
+	os.system ('apt-get chromium')
+	exit()
 
 print '''
 ██╗  ██╗ █████╗ ██╗     ██╗    ███████╗██╗██╗  ██╗    ██╗██╗
