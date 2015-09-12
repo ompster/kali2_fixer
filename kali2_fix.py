@@ -1,8 +1,9 @@
 ######################################
-## Kali Linux 2 Fixer 				##
+## Kali Linux 2 Fixer v 0.16		##
 ## By Nathan ASH 					##
 ## http://nathanash.id.au 			##
-## @ompster - github.com/ompster 	##
+## https://github.com/ompster		##
+## @ompster 						##
 ######################################
 
 import subprocess
