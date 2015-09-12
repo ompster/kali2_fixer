@@ -52,8 +52,12 @@ def install_xfce_func() :
 
 	if default_xfce == 'Y' :
 		print 'We will now install SLIM login manager and make XFCE the default desktop-enviroment...'
+		os.system ('clear')
+		print 'IN THE NEXT SCREEN YOU SHOULD SELECT SLIM AS THE DEFAULT LOGIN MANAGER!'
+		raw_input ('Press Enter to continue...')
 		os.system ('apt-get -y install slim')
 		os.system ('mv .xinitrc ~/.xinitrc')
+		os.system ('clear')
 		print 'All done! You need to reboot for changes to take effect :)'
 		print 'We will rebot now...'
 		raw_input ('Press Enter....')
