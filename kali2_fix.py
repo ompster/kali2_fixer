@@ -44,10 +44,10 @@ def install_chrome_func() :
 	os.system ('apt-get -y chromium')
 	exit()
 
-def install_xfce_func :
+def install_xfce_func() :
 	print 'We are about to download the XFCE4 and plugins...'
 	os.system ('apt-get -y install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies')
-	default_xfce = raw_input 'Would you like to make XFCE your default desktop-enviroment? Y/N'
+	default_xfce = raw_input ('Would you like to make XFCE your default desktop-enviroment? Y/N')
 	default_xfce = default_xfce.upper()
 
 	if default_xfce == 'Y' :
@@ -56,7 +56,7 @@ def install_xfce_func :
 		os.system ('mv .xinitrc ~/.xinitrc')
 		print 'All done! You need to reboot for changes to take effect :)'
 		print 'We will rebot now...'
-		raw_input 'Press Enter....'
+		raw_input ('Press Enter....')
 		os.system ('reboot')
 		exit()
 
@@ -76,7 +76,8 @@ if menu_option == "1" :
 	fix_armitage_func()
 elif menu_option == "2" :
 	install_chrome_func()
-elif menu_option == "3"
+elif menu_option == "3" :
+	install_xfce_func()
 else :
 	print '''
 	http://github.com/ompster
