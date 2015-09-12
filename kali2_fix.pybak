@@ -40,24 +40,8 @@ def fix_armitage_func():
 def install_chrome_func() :
 	print 'Installing Chromium, will first update sources...'
 	os.system ('apt-get update')
-	os.system ('apt-get -y chromium')
+	os.system ('apt-get chromium')
 	exit()
-
-def install_xfce_func :
-	print 'We are about to download the XFCE4 and plugins...'
-	os.system ('apt-get -y install kali-defaults kali-root-login desktop-base xfce4 xfce4-places-plugin xfce4-goodies')
-	default_xfce = raw_input 'Would you like to make XFCE your default desktop-enviroment? Y/N'
-	default_xfce = default_xfce.upper()
-
-	if default_xfce == 'Y' :
-		print 'We will now install SLIM login manager and make XFCE the default desktop-enviroment...'
-		os.system ('apt-get -y install slim')
-		os.system ('mv .xinitrc ~/.xinitrc')
-		print 'All done! You need to reboot for changes to take effect :)'
-		print 'We will rebot now...'
-		raw_input 'Press Enter....'
-		os.system ('reboot')
-		exit()
 
 print '''
 KALI FIXER 2                                               
@@ -66,8 +50,7 @@ print '''
 		What would you like to do?
 		1. Fix armitage
 		2. Install Chrome
-		3. Install XFCE4
-		4. Exit
+		3. Exit
 		'''
 menu_option = raw_input('-> ')
 
@@ -75,7 +58,6 @@ if menu_option == "1" :
 	fix_armitage_func()
 elif menu_option == "2" :
 	install_chrome_func()
-elif menu_option == "3"
 else :
 	print '''
 	http://github.com/ompster
