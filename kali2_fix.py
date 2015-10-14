@@ -22,7 +22,7 @@ def func_install_vbox():
 	os.system('wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -')
 	os.system('apt-get -y update')
 	print 'now install VirtualBox 5.0'
-	os.system('apt-get -y 8install virtualbox-5.0')
+	os.system('apt-get install -y virtualbox-5.0')
 	print 'We are all done! lets launch it!'
 	os.system('virtualbox')
 
