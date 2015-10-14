@@ -9,6 +9,34 @@
 import subprocess
 import os
 
+########## file write functions #########
+def func_append_file(appendFile, appendText):
+	with open(appendFile, "a") as appendFile:
+		appendFile.write(appendText)
+##########################################
+
+
+def func_install_vbox():
+	print 'Add VirtualBox sources and signing key then update source list...'
+	func_append_file('/etc/apt/sources.list', 'deb http://download.virtualbox.org/virtualbox/debian vivid contrib')
+	os.system('wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -')
+	os.system('apt-get -y update')
+	print 'now install VirtualBox 5.0'
+	os.system('apt-get -y 8install virtualbox-5.0')
+	print 'We are all done! lets launch it!'
+	os.system('virtualbox')
+
+
+
+def func_install_linset():
+	print 'We are about to install linset. First I will clone the github repo then install all the required tools...'
+	os.system('git clone https://github.com/Trig0n/Linset.git /usr/bin/linset')
+	os.system('apt-get install -y isc-dhcp-server hostapd dnsmasq lighttpd php5-cgi')
+	print 'writing permissions....'
+	subprocess.call(['chmod', 'u+x', '/usr/bin/linset/linset'])
+	os.system('clear')
+	print 'Install Complete! we will run linset now to test!'
+	subprocess.call(['/usr/bin/linset/linset'])
 
 
 def fix_armitage_func():
@@ -55,7 +83,7 @@ def install_xfce_func() :
 		os.system ('clear')
 		print 'IN THE NEXT SCREEN YOU SHOULD SELECT SLIM AS THE DEFAULT LOGIN MANAGER!'
 		raw_input ('Press Enter to continue...')
-		os.system ('apt-get -y install slim')
+		os.system ('apt-get install -y slim')
 		os.system ('mv .xinitrc ~/.xinitrc')
 		os.system ('clear')
 		print 'All done! You need to reboot for changes to take effect :)'
@@ -65,20 +93,20 @@ def install_xfce_func() :
 		exit()
 
 print '''
-#    #    #    #       ###     #####     ####### ### #     # ####### ######  
-#   #    # #   #        #     #     #    #        #   #   #  #       #     # 
-#  #    #   #  #        #           #    #        #    # #   #       #     # 
-###    #     # #        #      #####     #####    #     #    #####   ######  
-#  #   ####### #        #     #          #        #    # #   #       #   #   
-#   #  #     # #        #     #          #        #   #   #  #       #    #  
-#    # #     # ####### ###    #######    #       ### #     # ####### #     # 
+|---------------------------------------|
+|				KALI FIXER 2 
+|			by Nathan Ash @ompster
+|			nathanash.id 
+|---------------------------------------|	
 	'''
 print '''
 		What would you like to do?
 		1. Fix armitage
 		2. Install Chrome
 		3. Install XFCE4
-		4. Exit
+		4. Install Linset (Evil-twin WPA attack)
+		5. Install VirtualBox
+		6. Exit
 		'''
 menu_option = raw_input('-> ')
 
@@ -88,8 +116,13 @@ elif menu_option == "2" :
 	install_chrome_func()
 elif menu_option == "3" :
 	install_xfce_func()
+elif menu_option == "4" :
+	func_install_linset()
+elif menu_option == "5" :
+	func_install_vbox()
 else :
 	print '''
+	GOODBYE!
 	http://github.com/ompster
 	@ompster                      
 	'''

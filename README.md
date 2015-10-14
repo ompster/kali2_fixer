@@ -2,9 +2,13 @@
 Fix armitage in Kali Linux 2 and other tweaks + installers.
 
 # What does it do?
-- The script will download the latest stable armitage binaries and then initialize the database for you.
-- Install Chrome
-- Install XFCE4 with plugins and old style Kali 1.x menu
+		What would you like to do?
+		1. Fix armitage
+		2. Install Chrome
+		3. Install XFCE4
+		4. Install Linset (Evil-twin WPA attack)
+		5. Install VirtualBox
+		6. Exit
 
 
 # Usage
