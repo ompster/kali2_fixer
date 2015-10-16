@@ -52,7 +52,7 @@ def fix_armitage_func():
 	subprocess.call(['service', 'postgresql', 'start'])
 
 	print 'Initial msfDB schema creation....'
-	subprocess.call(['msfdb', 'init'])W
+	subprocess.call(['msfdb', 'init'])
 
 
 	start_it = raw_input('Would you like to start Armitage now? (Y/N)')
