@@ -31,7 +31,9 @@ def func_install_vbox():
 def func_install_linset():
 	print 'We are about to install linset. First I will clone the github repo then install all the required tools...'
 	os.system('git clone https://github.com/Trig0n/Linset.git /usr/bin/linset')
-	os.system('apt-get install -y isc-dhcp-server hostapd dnsmasq lighttpd php5-cgi')
+	print 'Have to make sure kali sources are up to date so i will do that now....'
+	os.system('apt-get update')
+	os.system('apt-get install -y isc-dhcp-server Hostapd dnsmasq lighttpd php5-cgi')
 	print 'writing permissions....'
 	subprocess.call(['chmod', 'u+x', '/usr/bin/linset/linset'])
 	os.system('clear')
