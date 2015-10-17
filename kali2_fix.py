@@ -43,6 +43,11 @@ def func_dvwa_install():
 	os.system('service mysql start')
 	print 'Lets launch it to test!'
 	print 'You will need to click install on the webpage to create the database ,etc'
+	os.system('clear')
+	print 'You will need to click create Database at the bottom of the page, you should then be redirected to the login page'
+	print 'Default credentials are:'
+	print 'admin'
+	print 'password'
 	os.system('firefox http://localhost/DVWA')
 
 
@@ -126,11 +131,13 @@ def install_xfce_func() :
 		exit()
 
 print '''
-|---------------------------------------|
-|				KALI FIXER 2 
-|			by Nathan Ash @ompster
-|			nathanash.id 
-|---------------------------------------|	
+>=>   >=>         >>       >=>       >=>            >=======> >=> >=>      >=> >=======> >======>     
+>=>  >=>         >>=>      >=>       >=>   >=>>=>   >=>       >=>  >=>   >=>   >=>       >=>    >=>   
+>=> >=>         >> >=>     >=>       >=>  >>   >=>  >=>       >=>   >=> >=>    >=>       >=>    >=>   
+>>=>>          >=>  >=>    >=>       >=>      >=>   >=====>   >=>     >=>      >=====>   >> >==>      
+>=>  >=>      >=====>>=>   >=>       >=>     >=>    >=>       >=>   >=> >=>    >=>       >=>  >=>     
+>=>   >=>    >=>      >=>  >=>       >=>   >=>      >=>       >=>  >=>   >=>   >=>       >=>    >=>   
+>=>     >=> >=>        >=> >=======> >=>  >======>  >=>       >=> >=>      >=> >=======> >=>      >=> 	
 	'''
 print '''
 		What would you like to do?
