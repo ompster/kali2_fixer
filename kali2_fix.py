@@ -36,9 +36,11 @@ def func_dvwa_install():
 	os.system('mv DVWA /var/www/html')
 	print 'Changing DVWA database configs'
 	replace('/var/www/html/DVWA/config/config.inc.php','p@ssw0rd','')
+	os.system('chmod 664 /var/www/html/DVWA/config/config.inc.php')
 	print 'Install complete.....'
-	print 'Starting apache2 service for you now...'
+	print 'Starting apache2 and mysql service for you now...'
 	os.system('service apache2 start')
+	os.system('service mysql start')
 	print 'Lets launch it to test!'
 	print 'You will need to click install on the webpage to create the database ,etc'
 	os.system('firefox http://localhost/DVWA')
