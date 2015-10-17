@@ -5,15 +5,47 @@
 ## https://github.com/ompster		##
 ## @ompster 						##
 ######################################
-
+from tempfile import mkstemp
+from shutil import move
+from os import remove
 import subprocess
 import os
+
+import sys
 
 ########## file write functions #########
 def func_append_file(appendFile, appendText):
 	with open(appendFile, "a") as appendFile:
 		appendFile.write(appendText)
+
+def replace(source_file_path, pattern, substring):
+    fh, target_file_path = mkstemp()
+    with open(target_file_path, 'w') as target_file:
+        with open(source_file_path, 'r') as source_file:
+            for line in source_file:
+                target_file.write(line.replace(pattern, substring))
+    remove(source_file_path)
+    move(target_file_path, source_file_path)
 ##########################################
+
+
+def func_dvwa_install():
+	print 'This will install damn vulnerable web app for you to practice on.'
+	print 'The installer will download the site files for you....'
+	os.system('wget https://codeload.github.com/RandomStorm/DVWA/zip/v1.9')
+	print 'Extracting contents and moving to WWW directory'
+	os.system('mkdir /var/www/html/dvwa')
+	os.system('unzip v1.9 -d /var/www/html')
+	os.system('mv /var/www/html/DVWA-1.9/* /var/www/html/dvwa/')
+	print 'Changing DVWA database configs'
+	replace('/var/www/html/dvwa/config/config.inc.php','p@ssw0rd','')
+	print 'Install complete.....'
+	print 'Starting apache2 service for you now...'
+	os.system('service apache2 start')
+	print 'Lets launch it to test!'
+	print 'You will need to click install on the webpage to create the database ,etc'
+	os.system('firefox http://localhost/dvwa')
+
 
 
 def func_install_vbox():
@@ -108,7 +140,8 @@ print '''
 		3. Install XFCE4
 		4. Install Linset (Evil-twin WPA attack)
 		5. Install VirtualBox
-		6. Exit
+		6. Install Damn Vulnerable Web App (DVWA)
+		0.Exit
 		'''
 menu_option = raw_input('-> ')
 
@@ -122,6 +155,8 @@ elif menu_option == "4" :
 	func_install_linset()
 elif menu_option == "5" :
 	func_install_vbox()
+elif menu_option == "6" :
+	func_dvwa_install()
 else :
 	print '''
 	GOODBYE!
