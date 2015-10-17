@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[
-# ${1:Kali 2 Fixer}
+# Kali 2 Fixer
 Fix Kali Linux 2 (sana) bugs and post install scripts for general tools, it can
 `
-		1. Fix armitage
-		2. Install Chrome
-		3. Install XFCE4
-		4. Install Linset (Evil-twin WPA attack)
-		5. Install VirtualBox
-		6. Install Damn Vulnerable Web App (DVWA)
+1. Fix armitage
+2. Install Chrome
+3. Install XFCE4
+4. Install Linset (Evil-twin WPA attack)
+5. Install VirtualBox
+6. Install Damn Vulnerable Web App (DVWA)
 `
 ## Installation
-Clone the repo:
+1. Clone the repo:
  `git clone https://github.com/ompster/kali2_fixer.git`
-cd into the created Directory:
+2. cd into the created Directory:
  `cd kali2_fixer`
-run the python script
+3. run the python script
  `python kali2_fixer.py`
 ## Usage
 Simply use the built in menu for your chosen task
