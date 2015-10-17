@@ -32,7 +32,8 @@ def replace(source_file_path, pattern, substring):
 def func_dvwa_install():
 	print 'This will install damn vulnerable web app for you to practice on.'
 	print 'The installer will download the site files for you....'
-	os.system('git clone https://github.com/randomstorm/DVWA.git /var/www/html')
+	os.system('git clone https://github.com/randomstorm/DVWA.git')
+	os.system('mv DVWA /var/www/html')
 	print 'Changing DVWA database configs'
 	replace('/var/www/html/DVWA/config/config.inc.php','p@ssw0rd','')
 	print 'Install complete.....'
