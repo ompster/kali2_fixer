@@ -163,7 +163,7 @@ elif menu_option == "5" :
 	func_install_vbox()
 elif menu_option == "6" :
 	func_dvwa_install()
-elif menu_option == "00"
+elif menu_option == "00" :
 	print 'You are about to install everything! Hit enter to continue...'
 	raw_input('......................................................')
 	fix_armitage_func()
