@@ -28,6 +28,17 @@ def replace(source_file_path, pattern, substring):
     move(target_file_path, source_file_path)
 ##########################################
 
+print '''
+>=>   >=>         >>       >=>       >=>            >=======> >=> >=>      >=> >=======> >======>     
+>=>  >=>         >>=>      >=>       >=>   >=>>=>   >=>       >=>  >=>   >=>   >=>       >=>    >=>   
+>=> >=>         >> >=>     >=>       >=>  >>   >=>  >=>       >=>   >=> >=>    >=>       >=>    >=>   
+>>=>>          >=>  >=>    >=>       >=>      >=>   >=====>   >=>     >=>      >=====>   >> >==>      
+>=>  >=>      >=====>>=>   >=>       >=>     >=>    >=>       >=>   >=> >=>    >=>       >=>  >=>     
+>=>   >=>    >=>      >=>  >=>       >=>   >=>      >=>       >=>  >=>   >=>   >=>       >=>    >=>   
+>=>     >=> >=>        >=> >=======> >=>  >======>  >=>       >=> >=>      >=> >=======> >=>      >=> 	
+	'''
+
+
 
 def func_dvwa_install():
 	print 'This will install damn vulnerable web app for you to practice on.'
@@ -49,6 +60,7 @@ def func_dvwa_install():
 	print 'admin'
 	print 'password'
 	os.system('firefox http://localhost/DVWA')
+	func_menu()
 
 
 
@@ -61,6 +73,7 @@ def func_install_vbox():
 	os.system('apt-get install -y virtualbox-5.0')
 	print 'We are all done! lets launch it!'
 	os.system('virtualbox')
+	func_menu()
 
 
 
@@ -75,6 +88,7 @@ def func_install_linset():
 	os.system('clear')
 	print 'Install Complete! we will run linset now to test!'
 	subprocess.call(['/usr/bin/linset/linset'])
+	func_menu()
 
 
 def fix_armitage_func():
@@ -101,14 +115,15 @@ def fix_armitage_func():
 		subprocess.call('armitage')
 
 	else :
-		print 'Exiting script, thanks for using! - @ompster'
+		print 'thanks for using! - @ompster'
+		func_menu()
 	####END FIX ARMITAGE####
 
 def install_chrome_func() :
 	print 'Installing Chromium, will first update sources...'
 	os.system ('apt-get update')
 	os.system ('apt-get -y install chromium')
-	exit()
+	func_menu()
 
 def install_xfce_func() :
 	print 'We are about to download the XFCE4 and plugins...'
@@ -127,60 +142,59 @@ def install_xfce_func() :
 		print 'All done! You need to reboot for changes to take effect :)'
 		print 'We will rebot now...'
 		raw_input ('Press Enter....')
-		os.system ('reboot')
+
+def func_menu() :
+	print '''
+	>=>   >=>         >>       >=>       >=>            >=======> >=> >=>      >=> >=======> >======>     
+	>=>  >=>         >>=>      >=>       >=>   >=>>=>   >=>       >=>  >=>   >=>   >=>       >=>    >=>   
+	>=> >=>         >> >=>     >=>       >=>  >>   >=>  >=>       >=>   >=> >=>    >=>       >=>    >=>   
+	>>=>>          >=>  >=>    >=>       >=>      >=>   >=====>   >=>     >=>      >=====>   >> >==>      
+	>=>  >=>      >=====>>=>   >=>       >=>     >=>    >=>       >=>   >=> >=>    >=>       >=>  >=>     
+	>=>   >=>    >=>      >=>  >=>       >=>   >=>      >=>       >=>  >=>   >=>   >=>       >=>    >=>   
+	>=>     >=> >=>        >=> >=======> >=>  >======>  >=>       >=> >=>      >=> >=======> >=>      >=> 	
+		'''
+	print '''
+			What would you like to do?
+			1. Fix armitage
+			2. Install Chrome
+			3. Install XFCE4
+			4. Install Linset (Evil-twin WPA attack)
+			5. Install VirtualBox
+			6. Install Damn Vulnerable Web App (DVWA)
+			0.Exit
+			'''
+	menu_option = raw_input('-> ')
+
+	if menu_option == "1" :
+		fix_armitage_func()
+	elif menu_option == "2" :
+		install_chrome_func()
+	elif menu_option == "3" :
+		install_xfce_func()
+	elif menu_option == "4" :
+		func_install_linset()
+	elif menu_option == "5" :
+		func_install_vbox()
+	elif menu_option == "6" :
+		func_dvwa_install()
+	elif menu_option == "00" :
+		print 'You are about to install everything! Hit enter to continue...'
+		raw_input('......................................................')
+		fix_armitage_func()
+		install_chrome_func()
+		install_xfce_func()
+		func_install_linset()
+		func_install_vbox()
+		func_dvwa_install()
+	else :
+		print '''
+		GOODBYE!
+		http://github.com/ompster
+		@ompster                      
+		'''
+
 		exit()
 
-print '''
->=>   >=>         >>       >=>       >=>            >=======> >=> >=>      >=> >=======> >======>     
->=>  >=>         >>=>      >=>       >=>   >=>>=>   >=>       >=>  >=>   >=>   >=>       >=>    >=>   
->=> >=>         >> >=>     >=>       >=>  >>   >=>  >=>       >=>   >=> >=>    >=>       >=>    >=>   
->>=>>          >=>  >=>    >=>       >=>      >=>   >=====>   >=>     >=>      >=====>   >> >==>      
->=>  >=>      >=====>>=>   >=>       >=>     >=>    >=>       >=>   >=> >=>    >=>       >=>  >=>     
->=>   >=>    >=>      >=>  >=>       >=>   >=>      >=>       >=>  >=>   >=>   >=>       >=>    >=>   
->=>     >=> >=>        >=> >=======> >=>  >======>  >=>       >=> >=>      >=> >=======> >=>      >=> 	
-	'''
-print '''
-		What would you like to do?
-		1. Fix armitage
-		2. Install Chrome
-		3. Install XFCE4
-		4. Install Linset (Evil-twin WPA attack)
-		5. Install VirtualBox
-		6. Install Damn Vulnerable Web App (DVWA)
-		0.Exit
-		'''
-menu_option = raw_input('-> ')
-
-if menu_option == "1" :
-	fix_armitage_func()
-elif menu_option == "2" :
-	install_chrome_func()
-elif menu_option == "3" :
-	install_xfce_func()
-elif menu_option == "4" :
-	func_install_linset()
-elif menu_option == "5" :
-	func_install_vbox()
-elif menu_option == "6" :
-	func_dvwa_install()
-elif menu_option == "00" :
-	print 'You are about to install everything! Hit enter to continue...'
-	raw_input('......................................................')
-	fix_armitage_func()
-	install_chrome_func()
-	install_xfce_func()
-	func_install_linset()
-	func_install_vbox()
-	func_dvwa_install()
-else :
-	print '''
-	GOODBYE!
-	http://github.com/ompster
-	@ompster                      
-	'''
-
-	exit()
-
-
+func_menu()
 
 
