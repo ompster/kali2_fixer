@@ -1,36 +1,36 @@
-<snippet>
-  <content><![CDATA[
-# Kali 2 Fixer
-Fix Kali Linux 2 (sana) bugs and post install scripts for general tools, it can
-`
+# kali2_fixer
+Fix armitage in Kali Linux 2
+
+# What does it do?
+The script will download the latest stable armitage binaries and then initialize the database for you. it can also...
 1. Fix armitage
 2. Install Chrome
 3. Install XFCE4
 4. Install Linset (Evil-twin WPA attack)
 5. Install VirtualBox
 6. Install Damn Vulnerable Web App (DVWA)
-`
-## Installation
-1. Clone the repo:
- `git clone https://github.com/ompster/kali2_fixer.git`
-2. cd into the created Directory:
- `cd kali2_fixer`
-3. run the python script
- `python kali2_fixer.py`
-## Usage
-Simply use the built in menu for your chosen task
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-## History
-TODO: Write history
-## Credits
-TODO: Write credits
-## License
-TODO: Write license
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+
+
+# Usage
+Clone the git repo anywhere you like using:
+git clone https://github.com/ompster/kali2_fixer.git
+
+cd int kali2_fixer directory
+cd kali2_fixer
+
+Run the python script
+python kali2_fix.py
+and follow the prompts! :)
+
+More fixes are coming soon! 
+if you are interested in learning more about kali visit the facebook group!
+https://www.facebook.com/groups/KaliLinuxOS
+
+Follow me on twitter!
+@ompster
+
+And visit my blog for all-round nerdy stuff
+http://nathanash.id.au
+
+Thanks!
+
