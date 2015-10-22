@@ -161,6 +161,7 @@ def func_menu() :
 			4. Install Linset (Evil-twin WPA attack)
 			5. Install VirtualBox
 			6. Install Damn Vulnerable Web App (DVWA)
+			7. Update This Script
 			0.Exit
 			'''
 	menu_option = raw_input('-> ')
