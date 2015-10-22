@@ -40,6 +40,10 @@ print '''
 
 
 
+def func_update():
+	print 'Will now update this script...'
+	os.system('git pull')
+
 def func_dvwa_install():
 	print 'This will install damn vulnerable web app for you to practice on.'
 	print 'The installer will download the site files for you....'
@@ -178,6 +182,8 @@ def func_menu() :
 		func_install_vbox()
 	elif menu_option == "6" :
 		func_dvwa_install()
+	elif menu_option == "7" :
+		func_update()
 	elif menu_option == "00" :
 		print 'You are about to install everything! Hit enter to continue...'
 		raw_input('......................................................')
