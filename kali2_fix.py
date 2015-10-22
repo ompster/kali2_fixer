@@ -166,6 +166,7 @@ def func_menu() :
 			5. Install VirtualBox
 			6. Install Damn Vulnerable Web App (DVWA)
 			7. Update This Script
+			00. Install ALL
 			0.Exit
 			'''
 	menu_option = raw_input('-> ')
