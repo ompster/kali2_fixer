@@ -39,10 +39,15 @@ print '''
 	'''
 
 
+def func_proxychains():
+	print 'updating proxychains config....'
+	os.system('cp proxychains.conf /etc/proxychains.conf')
 
 def func_update():
 	print 'Will now update this script...'
 	os.system('git pull')
+	print 'will make sure proxychains config file is up to date too...'
+	func_proxychains()
 
 def func_dvwa_install():
 	print 'This will install damn vulnerable web app for you to practice on.'
