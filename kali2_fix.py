@@ -38,6 +38,14 @@ print '''
 >=>     >=> >=>        >=> >=======> >=>  >======>  >=>       >=> >=>      >=> >=======> >=>      >=> 	
 	'''
 
+def func_tor():
+	print 'installing TOR...'
+	os.system('apt-get install -y tor')
+	print 'will now update proxychains config for use with TOR'
+	func_proxychains()
+	print 'You can now use the proxychains command to launch programs you wish to anonymize.'
+	print 'will now launch firefox to show you a test...'
+	os.system('proxychains firefox whatismyipaddress.com')
 
 def func_proxychains():
 	print 'updating proxychains config....'
@@ -171,7 +179,7 @@ def func_menu() :
 			5. Install VirtualBox
 			6. Install Damn Vulnerable Web App (DVWA)
 			7. Update This Script
-			8. Install proxychains config (anon proxylist)
+			8. Install TOR
 			00. Install ALL
 			0.Exit
 			'''
@@ -191,6 +199,8 @@ def func_menu() :
 		func_dvwa_install()
 	elif menu_option == "7" :
 		func_update()
+	elif menu_option == "8" :
+		func_tor()
 	elif menu_option == "00" :
 		print 'You are about to install everything! Hit enter to continue...'
 		raw_input('......................................................')
