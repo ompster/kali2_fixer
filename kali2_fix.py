@@ -44,9 +44,8 @@ def func_tor():
 	print 'will now update proxychains config for use with TOR'
 	func_proxychains()
 	print 'You can now use the proxychains command to launch programs you wish to anonymize.'
-	print 'will now launch firefox to show you a test...'
+	print 'you must start tor first though I will do that now... you will see a complete message'
 	os.system('tor')
-	os.system('proxychains firefox whatismyipaddress.com')
 
 def func_proxychains():
 	print 'updating proxychains config....'
