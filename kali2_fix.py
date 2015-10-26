@@ -45,6 +45,7 @@ def func_tor():
 	func_proxychains()
 	print 'You can now use the proxychains command to launch programs you wish to anonymize.'
 	print 'will now launch firefox to show you a test...'
+	os.system('tor')
 	os.system('proxychains firefox whatismyipaddress.com')
 
 def func_proxychains():
