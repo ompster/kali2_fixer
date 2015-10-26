@@ -179,7 +179,7 @@ def func_menu() :
 			5. Install VirtualBox
 			6. Install Damn Vulnerable Web App (DVWA)
 			7. Update This Script
-			8. Install TOR
+			8. Install TOR and proxychains config
 			00. Install ALL
 			0.Exit
 			'''
