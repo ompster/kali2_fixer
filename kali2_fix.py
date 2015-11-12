@@ -28,32 +28,34 @@ def replace(source_file_path, pattern, substring):
     move(target_file_path, source_file_path)
 ##########################################
 
-print '''
-  _  __     _ _ ____    
- | |/ /__ _| (_)___ \   
- | ' // _` | | | __) |  
- | . \ (_| | | |/ __/   
- |_|\_\__,_|_|_|_____|  
-  _____ _               
- |  ___(_)_  _____ _ __ 
- | |_  | \ \/ / _ \ '__|
- |  _| | |>  <  __/ |   
- |_|   |_/_/\_\___|_|   
-	'''
+####COLOURS YO##########
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+########################
+
+
+
 
 def func_teamveiwer():
 	print 'Downloading teamveiwer...'
 	os.system('wget http://download.teamviewer.com/download/teamviewer_i386.deb')
 	print 'We need to set multi-arch support for dpkg. I will do that now....'
-	os.system('dplg --add-architecture i386')
+	os.system('dpkg --add-architecture i386')
 	print 'Running sources update....'
 	os.system('apt-get -y update')
 	print 'attempt install of teamviewer....'
 	os.system('dpkg -i teamviewer.deb')
 	os.system('apt-get install -y -f')
-	os.system('dpkg -i teamviewer.deb')
-	print 'you should now be able to normally launch teamviewer via the teamviewer cmd'
-	raw_unput('Press enter to launch now....')
+	os.system('dpkg -i teamviewer_i386.deb')
+	print bcolors.BOLD + 'you should now be able to normally launch teamviewer via the teamviewer cmd'
+	raw_input('Press enter to launch now....')
 	os.system('teamviewer')
 
 def func_tor():
@@ -179,7 +181,7 @@ def install_xfce_func() :
 		raw_input ('Press Enter....')
 
 def func_menu() :
-	print '''
+	print bcolors.OKBLUE + '''
   _  __     _ _ ____    
  | |/ /__ _| (_)___ \   
  | ' // _` | | | __) |  
@@ -190,7 +192,7 @@ def func_menu() :
  | |_  | \ \/ / _ \ '__|
  |  _| | |>  <  __/ |   
  |_|   |_/_/\_\___|_|   
-	'''
+	''' + bcolors.ENDC
 	print '''
 			What would you like to do?
 			1. Fix armitage
@@ -242,7 +244,6 @@ def func_menu() :
 		'''
 
 		exit()
-
 func_menu()
 
 
