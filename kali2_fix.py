@@ -51,7 +51,7 @@ def func_teamveiwer():
 	print 'Running sources update....'
 	os.system('apt-get -y update')
 	print 'attempt install of teamviewer....'
-	os.system('dpkg -i teamviewer.deb')
+	os.system('dpkg -i teamviewer_i386.deb')
 	os.system('apt-get install -y -f')
 	os.system('dpkg -i teamviewer_i386.deb')
 	print bcolors.BOLD + 'you should now be able to normally launch teamviewer via the teamviewer cmd'
