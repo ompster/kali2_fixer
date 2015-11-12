@@ -223,7 +223,7 @@ def func_menu() :
 		func_update()
 	elif menu_option == "8" :
 		func_tor()
-	elif menu_option == "9"
+	elif menu_option == "9" :
 		func_teamveiwer()
 	elif menu_option == "00" :
 		print 'You are about to install everything! Hit enter to continue...'
