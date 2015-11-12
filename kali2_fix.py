@@ -38,6 +38,21 @@ print '''
 >=>     >=> >=>        >=> >=======> >=>  >======>  >=>       >=> >=>      >=> >=======> >=>      >=> 	
 	'''
 
+def func_teamveiwer():
+	print 'Downloading teamveiwer...'
+	os.system('wget http://download.teamviewer.com/download/teamviewer_i386.deb')
+	print 'We need to set multi-arch support for dpkg. I will do that now....'
+	os.system('dplg --add-architecture i386')
+	print 'Running sources update....'
+	os.system('apt-get -y update')
+	print 'attempt install of teamviewer....'
+	os.system('dpkg -i teamviewer.deb')
+	os.system('apt-get install -y -f')
+	os.system('dpkg -i teamviewer.deb')
+	print 'you should now be able to normally launch teamviewer via the teamviewer cmd'
+	raw_unput('Press enter to launch now....')
+	os.system('teamviewer')
+
 def func_tor():
 	print 'installing TOR...'
 	os.system('apt-get install -y tor')
