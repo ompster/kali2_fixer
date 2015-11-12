@@ -64,7 +64,7 @@ def func_tor():
 	print 'will now update proxychains config for use with TOR'
 	func_proxychains()
 	print 'You can now use the proxychains command to launch programs you wish to anonymize.'
-	print 'you must start tor first though I will do that now... you will see a complete message'
+	print bcolors.BOLD + 'you must start tor first though I will do that now... you will see a complete message' + bcolors.ENDC
 	os.system('tor')
 
 def func_proxychains():
@@ -72,7 +72,7 @@ def func_proxychains():
 	os.system('cp proxychains.conf /etc/proxychains.conf')
 
 def func_update():
-	print 'Will now update this script...'
+	print bcolors.BOLD + 'Will now update this script...' + bcolors.ENDC
 	os.system('git pull')
 	print 'will make sure proxychains config file is up to date too...'
 	func_proxychains()
