@@ -9,6 +9,10 @@ The script will download the latest stable armitage binaries and then initialize
 4. Install Linset (Evil-twin WPA attack)
 5. Install VirtualBox
 6. Install Damn Vulnerable Web App (DVWA)
+7. Update this script
+8. Install TOR and proxychains config
+9. Install Teamviewer
+
 
 
 # Usage
