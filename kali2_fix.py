@@ -54,7 +54,7 @@ def func_teamveiwer():
 	os.system('dpkg -i teamviewer_i386.deb')
 	os.system('apt-get install -y -f')
 	os.system('dpkg -i teamviewer_i386.deb')
-	print bcolors.BOLD + 'you should now be able to normally launch teamviewer via the teamviewer cmd'
+	print bcolors.BOLD + 'you should now be able to normally launch teamviewer via the teamviewer cmd' + bcolors.ENDC
 	raw_input('Press enter to launch now....')
 	os.system('teamviewer')
 
