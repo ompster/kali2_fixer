@@ -1,19 +1,14 @@
-# kali2_fixer
-Fix armitage in Kali Linux 2
-
 # What does it do?
 The script will download the latest stable armitage binaries and then initialize the database for you. it can also...
 - Fix armitage
 2. Install Chrome
-3. Install XFCE4
-4. Install Linset (Evil-twin WPA attack)
+3. Install XFCE4 and classic kali 1.x menus
+4. Install Linset (Evil-twin WPA attack) English version and all pre-requisites
 5. Install VirtualBox
 6. Install Damn Vulnerable Web App (DVWA)
-7. Update this script
+7. Update itself
 8. Install TOR and proxychains config
-9. Install Teamviewer
-
-
+9. Install Teamviewer 
 
 # Usage
 <dl>
@@ -29,6 +24,10 @@ The script will download the latest stable armitage binaries and then initialize
 <h2>and follow the prompts! :)</h2>
 </dl>
 More fixes are coming soon! 
+Planned:
+* Include my PyCrunch code (crunch wordlist generator wizzard)
+* 
+
 if you are interested in learning more about kali visit the facebook group!
 https://www.facebook.com/groups/kalilinuxproject
 
