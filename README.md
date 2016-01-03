@@ -3,7 +3,7 @@ Fix armitage in Kali Linux 2
 
 # What does it do?
 The script will download the latest stable armitage binaries and then initialize the database for you. it can also...
-1. Fix armitage
+- Fix armitage
 2. Install Chrome
 3. Install XFCE4
 4. Install Linset (Evil-twin WPA attack)
@@ -16,22 +16,24 @@ The script will download the latest stable armitage binaries and then initialize
 
 
 # Usage
-Clone the git repo anywhere you like using:
-git clone https://github.com/ompster/kali2_fixer.git
+<dl>
+ <dt>Clone the git repo anywhere you like using: </dt>
+ <dd>git clone https://github.com/ompster/kali2_fixer.git</dd>
 
-cd int kali2_fixer directory
-cd kali2_fixer
+<dt>cd int kali2_fixer directory</dt>
+<dd>cd kali2_fixer</dd>
 
-Run the python script
-python kali2_fix.py
-and follow the prompts! :)
+<dt>Run the python script</dt>
+<dd>python kali2_fix.py</dd>
 
+<h2>and follow the prompts! :)</h2>
+</dl>
 More fixes are coming soon! 
 if you are interested in learning more about kali visit the facebook group!
-https://www.facebook.com/groups/KaliLinuxOS
+https://www.facebook.com/groups/kalilinuxproject
 
 Follow me on twitter!
-@ompster
+<a href="https://twitter.com/ompster"> @ompster </a>
 
 And visit my blog for all-round nerdy stuff
 http://nathanash.id.au
