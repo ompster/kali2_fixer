@@ -1,12 +1,12 @@
 #!/bin/sh
-
+## Modified for Kali2_fixer by @ompster
 # BackBox Script for Anonymous Internet Navigation
 #
 # This script is intended to set up your BackBox machine to guarantee 
 # anonymity through Tor. Additionally, the script takes further steps to 
 # guarantee prevantion of data leakage by killing dangerous processes,
 # changing MAC address and IP information and so on.
-#
+## ORIGINAL CREDIT TO
 # Author: Raffaele Forte <raffaele@backbox.org>
 # Version: 1.0
 ########Props to original author! This script has been modified by @ompster - nathanash.id.au for use in kali linux 2.x
@@ -30,7 +30,7 @@ BLEACHBIT_CLEANERS="bash.history system.cache system.clipboard system.custom sys
 OVERWRITE="true"
 
 # The default local hostname
-REAL_HOSTNAME="backbox"
+REAL_HOSTNAME="kali"
 
 # Include default options, if any
 if [ -f /etc/default/backbox-anonymous ] ; then
