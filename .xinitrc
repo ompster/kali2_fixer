@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # ~/.xinitrc
-#
+#Modified for use with Kali2_fixer by @ompster
 # Executed by startx (run your window manager from here)
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
